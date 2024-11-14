@@ -1,0 +1,248 @@
+ /*
+Author: Danielle Thompson
+Date: November 3, 2024
+File Name: styles_sheet_photo.css
+*/
+
+
+/* CSS Reset */
+body, header, nav, main, footer, h1, div, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+    
+
+body {
+    background-color: #FFB6C1;
+}
+
+body {
+   background-image: url("images/brianna_water.JPG");
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+
+/* Style rule for images */
+img{
+    max-width: 100%;
+    display: block;
+}
+
+/* Style rules for mobile viewpoint */
+
+/* hide tab-desk class */
+.tab-desk {
+    display: none;
+}
+
+
+/* style rule for header */
+header {
+   font-family: "Ribeye", serif;
+   text-align: center;
+   font-size: 1.5em;
+   color: #000;
+}
+
+
+header img {
+    margin: 0 auto;
+}
+    
+
+/* Style rules for navigation area */
+nav {
+   padding: 1%;
+   margin-bottom: 1%;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: right;
+    text-decoration: none;
+}
+    
+
+nav li  {
+    font-size: 1.50em;
+    font-family:"Fascinate Inline", system-ui; 
+    border-top: 1px solid #fff;
+}
+
+
+nav li a {
+    display: block;
+    color: #fff;
+    padding: 0.5em 1em;
+    text-decoration: none;
+}
+
+
+
+
+/*style rules for main content */
+main {
+    padding: 1em;
+    background-color:#f08080;
+    overflow: auto;
+    font-family: "Faculty Glyphic", serif;
+    font-size: 1.50em;
+}
+
+
+
+div.gallery {
+  margin: 25px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 10px;
+  text-align: center;
+}
+
+
+#contact {
+    text-align: center;
+}
+
+#contact a {
+    color: #20B2AA;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+img {
+    border:5px solid #20B2AA;
+    border-radius: 6px;
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 40px;
+}
+ 
+.container p {
+    text-align: center;
+    font-size: 15px;
+}
+
+
+
+/* Style rules for footer content */
+footer{
+    text-align: center;
+    font-size: 1.25em;
+    clear: left;
+    color: #20B2AA;
+}    
+
+footer a {
+    color: #4645a8;
+    text-decoration: none;
+}
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 550px),print {
+}
+
+/* Tablet Viewport: Show tab-desk class, hide mobile class */
+.tab-desk {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
+/* Tablet Viewport: Style rule for header content */
+span.tab-desk {
+    display: inline;
+}
+
+/* Tablet Viewport: Style rules for nav area */
+nav li {
+    border-top: none;
+    display: inline-block;
+    font-size: 1.5em;
+    border-right: 1px solid #FFB6C1;
+}
+
+nav li:last-child {
+    border-right: none;
+}
+
+nav li a {
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 769px), print {
+
+/* Desktop Viewport: Style rules for nav area */
+header {
+    padding: 2%;
+}
+
+/* Desktop Viewport: Style rules for nav area */
+nav li a {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+
+
+/* Desktop Viewport: Style rules for the main content */
+main {
+    margin-left: 5%;
+}
+
+main h1 {
+    font-size: 1.5em;
+} 
+
+/* Media Query for print */
+@media print {
+
+body {
+    background-color: #FFB6C1;
+    color: #000;
+}
+
+}
+
+
+
+
+
+
+
+
+
+footer p a {
+    color: #4645a8;
+    text-decoration: none;
+}
+
+
+
+
