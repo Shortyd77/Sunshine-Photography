@@ -55,13 +55,14 @@ header img {
 
 /* Style rules for navigation area */
 nav {
-   padding: 1%;
-   margin-bottom: 1%;
+    padding: 1%;
+    margin-bottom: 1%;
+    background-color: #20B2AA; /* teal background */
 }
 
 nav ul {
     list-style-type: none;
-    text-align: right;
+    text-align: center;
     text-decoration: none;
 }
     
@@ -79,6 +80,12 @@ nav li a {
     padding: 0.5em 1em;
     text-decoration: none;
 }
+
+nav li a:hover {
+    background-color: #FFB6C1;
+    color: #000;
+}
+
 
 
 
@@ -145,14 +152,17 @@ img {
 
 
 /* Style rules for footer content */
-footer{
+footer {
     text-align: center;
     font-size: 1.25em;
     clear: left;
     color: #20B2AA;
-}    
+    background-color: #20B2AA;
+    color: #fff;
+    padding: 1em;
+}
 
-footer p {
+  footer p {
     color: #fff;
     text-decoration: none;
     text-align: center;
