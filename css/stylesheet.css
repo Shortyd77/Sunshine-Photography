@@ -281,6 +281,7 @@ body {
   text-decoration: underline;
 }
 
+
 /* ===== Gallery layout upgrade (simple + clean) ===== */
 
 .gallery-grid {
@@ -324,7 +325,8 @@ body {
   font-weight: normal;
 }
 
-div.gallery img {
+
+  div.gallery img {
   border: none;
 }
 
