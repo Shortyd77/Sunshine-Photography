@@ -1,13 +1,11 @@
-// Create varibables for the welcome message
-var greeting = 'Hello ';
-var name = 'Welcome to Sunshine Photography';
-var message = ', How can I help you today:';
-//Concatenate the three variables above to create a welcome message
+// Create variables for the welcome message
+var greeting = 'Hello, ';
+var name = 'welcome to Sunshine Photography';
+var message = '! How can I help you today?';
+
+// Concatenate the three variables above to create the welcome message
 var welcome = greeting + name + message;
 
-// Combine the message
-var welcomeMessage = greeting + name + message;
-
-// Get the element that has an id of greeting
-var el = document.getELementById('greeting');
-
+// Get the element that has id of greeting
+var el = document.getElementById('greeting');
+el.textContent = welcome;
