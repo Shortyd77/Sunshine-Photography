@@ -1,6 +1,6 @@
 // Create variables for the welcome message
 var greeting = 'Hello, ';
-var name = 'welcome to Sunshine Photography';
+var name = 'welcome to Sunshine Photography!';
 var message = '! How can I help you today?';
 
 // Concatenate the three variables above to create the welcome message
