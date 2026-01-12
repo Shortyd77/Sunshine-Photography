@@ -248,6 +248,40 @@ body {
   font-weight: 600;
 }
 
+/* ==============================
+   Contact Page – Airy Layout
+   ============================== */
+
+#contact {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5em 2em;
+}
+
+#greeting {
+  font-size: 1.2em;
+  font-weight: 500;
+  margin: 0.5em 0 2em;
+}
+
+.booking-info {
+  margin-top: 2.5em;
+  font-size: 0.95em;
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+.booking-info p {
+  margin: 0.6em 0;
+  font-weight: normal;
+}
+
+.booking-info a {
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+
 
 
 
