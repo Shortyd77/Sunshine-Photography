@@ -50,6 +50,7 @@ header {
 
 header img {
     margin: 0 auto;
+    margin-bottom: 1;
 }
     
 
@@ -90,13 +91,17 @@ nav li a:hover {
 
 
 
-/*style rules for main content */
+
+ /* Update your existing main rule to this */
 main {
-    padding: 1em;
-    background-color:#f08080;
+    padding: 2em;
+    background-color: #FFFDF5; /* The new cream color */
     overflow: auto;
-    font-family: "Faculty Glyphic", serif;
-    font-size: 1.50em;
+    font-family: Arial, sans-serif; /* Cleaner font for paragraphs */
+    font-size: 1.1em; /* Slightly smaller for better readability */
+    color: #333; /* Dark grey text is easier on the eyes than pure black */
+}
+   
 }
 
 
@@ -352,6 +357,35 @@ body {
 /* Improvement: Add more "breathing room" to your main content */
 main div {
     padding-bottom: 20px;
+}
+
+/* Style for the Book Now Button */
+.book-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #20B2AA; /* Matches your teal theme */
+    color: #ffffff !important; /* White text */
+    text-decoration: none;
+    font-family: "Fascinate Inline", cursive; /* Matches your nav font */
+    font-size: 1.1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border: 2px solid #fff;
+}
+
+.book-button:hover {
+    background-color: #FFB6C1; /* Light pink hover effect */
+    color: #000 !important;
+}
+
+/* Enhancing the offer box visibility */
+#specialOffer {
+    background-color: #ffffff;
+    border: 4px dashed #20B2AA;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1); /* Adds a subtle shadow */
 }
 
 
