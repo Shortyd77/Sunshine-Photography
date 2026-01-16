@@ -331,7 +331,28 @@ body {
 }
 
 
+/* Styling for the new JS offer */
+#specialOffer {
+    background-color: #fff; /* White background to pop against the pink */
+    color: #20B2AA;        /* Teal text to match your theme */
+    padding: 20px;
+    margin: 20px auto;
+    border: 3px dashed #20B2AA;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 80%;
+}
 
+#offerEnds {
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+/* Improvement: Add more "breathing room" to your main content */
+main div {
+    padding-bottom: 20px;
+}
 
 
 
