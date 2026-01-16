@@ -1,3 +1,5 @@
+/* the script is placed inside an immediately invoked function expression which helps protect the scope of variables */
+
 (function() {
     // 1. Create variables for the message and date details
     var expiryMsg; 
