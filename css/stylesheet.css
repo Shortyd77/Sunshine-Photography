@@ -347,32 +347,37 @@ main div {
     border-color: #FFB6C1;
 }
 
-/* Feature section styling */
-.features {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 40px;
-}
-
-.feature-item {
-    flex: 1;
-    min-width: 250px;
+#pricing-section {
+    margin: 40px 0;
     text-align: center;
-    background: #fff;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+th {
+    background-color: #20B2AA; /* Your Teal */
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#bulkBonus {
+    background-color: #f08080; /* Your Pink/Coral */
+    color: white;
+    display: inline-block;
     padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin-top: 15px;
 }
-
-.feature-item h3 {
-    font-family: "Ribeye", serif;
-    color: #f08080; /* Coral for headings */
-    margin-bottom: 10px;
-}
-
-
 
 
 
