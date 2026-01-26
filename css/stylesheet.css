@@ -168,6 +168,7 @@ footer {
 
 /* Media Query for Tablet Viewport */
 @media screen and (min-width: 550px),print {
+}
 
 /* Tablet Viewport: Show tab-desk class, hide mobile class */
 .tab-desk {
@@ -212,17 +213,8 @@ main {
 
 main h1 {
     font-size: 1.5em;
-} 
-
-
-/* Media Query for print */
-@media print {
-
-body {
-    background-color: #FFB6C1;
-    color: #000;
 }
-
+} /* this ends the tablet query */
 
 
 #greeting {
@@ -314,26 +306,20 @@ body {
 }
 
 
-/* Improvement: Add more "breathing room" to your main content */
-/* Update  existing main rule to this */
-   main {
+/* --- End of Tablet View --- */
+    main h1 {
+        font-size: 1.5em;
+    } 
+} /* This ends the Tablet media query */
+
+
+/* --- Main Styles (Works on all screens) --- */
+main {
     padding: 2em;
-    background-color: #FFFDF5; /* The new cream color */
+    background-color: #FFFDF5; /* The Cream color */
     overflow: auto;
-    font-family: Arial, sans-serif; /* Cleaner font for paragraphs */
-    font-size: 1.1em; /* Slightly smaller for better readability */
-    color: #333; /* Dark grey text is easier on the eyes than pure black */
-}
-
-
-main div {
-    padding-bottom: 20px;
-}
-
-.book-button:hover {
-    background-color: #FFB6C1;
-    color: #000 !important;
-    border-color: #FFB6C1;
+    font-family: Arial, sans-serif;
+    color: #333;
 }
 
 #pricing-section {
@@ -341,48 +327,43 @@ main div {
     text-align: center;
 }
 
-
-#bulkBonus {
-    background-color: #f08080; /* Your Pink/Coral */
-    color: white;
-    display: inline-block;
-    padding: 15px;
-    border-radius: 20px;
-    margin-top: 15px;
-}
-
- table {
+table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
     background-color: white;
 }
 
- th {
-    background-color: #20B2AA;
+th {
+    background-color: #20B2AA; /* Teal */
     color: white;
     padding: 10px;
 }
 
- td {
+td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
 }
 
-/* Desktop */
-@media screen and (min-width: 769px) {
-  header { padding: 2%; }
-  nav li a { padding: 0.5em 1.5em; }
-  main { margin-left: 5%; }
-  main h1 { font-size: 1.5em; }
+#bulkBonus {
+    background-color: #f08080; /* Pink */
+    color: white;
+    display: inline-block;
+    padding: 15px;
+    border-radius: 20px;
 }
 
-/* Print ONLY */
+/* --- Print ONLY Styles (Last section of the file) --- */
 @media print {
-  body { background-color: #FFB6C1; color: #000; }
+    body {
+        background-color: #fff;
+        color: #000;
+    }
+    nav, footer, #specialOffer {
+        display: none;
+    }
 }
-
 
 
 
