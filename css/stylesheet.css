@@ -1,7 +1,7 @@
  /*
 Author: Danielle Thompson
-Date: November 3, 2024
-File Name: styles_sheet_photo.css
+Date: January 2, 2026
+File Name: css/styesheet.css
 */
 
 
@@ -168,6 +168,7 @@ footer {
 
 /* Media Query for Tablet Viewport */
 @media screen and (min-width: 550px),print {
+
 }
 
 /* Tablet Viewport: Show tab-desk class, hide mobile class */
@@ -213,9 +214,9 @@ main {
 
 main h1 {
     font-size: 1.5em;
-}
-} /* this ends the tablet query */
-
+} 
+} /* Closes h1 */
+} /* Closes the Tablet Media Query so the rest of your code can work */
 
 #greeting {
   margin: 0.5em 0 1em;
