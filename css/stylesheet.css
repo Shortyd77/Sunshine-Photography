@@ -215,8 +215,8 @@ main {
 main h1 {
     font-size: 1.5em;
 } 
-} /* Closes h1 */
-} /* Closes the Tablet Media Query so the rest of your code can work */
+} 
+
 
 #greeting {
   margin: 0.5em 0 1em;
