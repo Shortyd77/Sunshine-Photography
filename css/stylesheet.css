@@ -50,7 +50,7 @@ header {
 
 header img {
     margin: 0 auto;
-    margin-bottom: 1;
+    margin-bottom: 1em;
 }
     
 
@@ -201,22 +201,6 @@ nav li a {
     padding-right: 0.5em;
     padding-left: 0.5em;
 }
-}
-/* Media Query for Desktop Viewport */
-@media screen and (min-width: 769px), print {
-
-/* Desktop Viewport: Style rules for nav area */
-header {
-    padding: 2%;
-}
-
-/* Desktop Viewport: Style rules for nav area */
-nav li a {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
-}
 
 
 
@@ -357,23 +341,6 @@ main div {
     text-align: center;
 }
 
-table {
-    width: 80%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    background-color: #fff;
-}
-
-th {
-    background-color: #20B2AA; /* Your Teal */
-    color: white;
-    padding: 10px;
-}
-
-td {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-}
 
 #bulkBonus {
     background-color: #f08080; /* Your Pink/Coral */
@@ -403,6 +370,18 @@ td {
     text-align: center;
 }
 
+/* Desktop */
+@media screen and (min-width: 769px) {
+  header { padding: 2%; }
+  nav li a { padding: 0.5em 1.5em; }
+  main { margin-left: 5%; }
+  main h1 { font-size: 1.5em; }
+}
+
+/* Print ONLY */
+@media print {
+  body { background-color: #FFB6C1; color: #000; }
+}
 
 
 
