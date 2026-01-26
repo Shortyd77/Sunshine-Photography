@@ -1,5 +1,5 @@
 (function() {
-    // PART ONE: OFFER EXPIRY (Chapter 3 logic)
+    // PART ONE: 25% OFFER EXPIRY
     var expiryMsg; 
     var today;
     var elEnds;
@@ -26,14 +26,13 @@
         elEnds.innerHTML = offerExpires(today);
     }
 
-    // PART TWO: PRICING LOOP (Chapter 4 logic)
+    // PART TWO: PRICING LOOP
     var photos = [5, 10, 15, 20]; 
     var pricePerPhoto = 15;   
     var tableHTML = '<table><tr><th>Photos</th><th>Price</th></tr>';
 
     for (var i = 0; i < photos.length; i++) {
         var rowTotal = photos[i] * pricePerPhoto;
-        // FIXED: Added the missing ' after the $ so the code knows it's text
         tableHTML += '<tr><td>' + photos[i] + ' Digital Images</td><td>$' + rowTotal + '</td></tr>';
     }
     tableHTML += '</table>';
@@ -57,5 +56,4 @@
     if (bulkBonusEl) {
         bulkBonusEl.innerHTML = bonusMsg;
     }
-}());
-
+}()); // This closing part is very important!
