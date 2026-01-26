@@ -88,7 +88,7 @@ nav li a:hover {
 }
 
 
- /* Update your existing main rule to this */
+ /* Update  existing main rule to this */
    main {
     padding: 2em;
     background-color: #FFFDF5; /* The new cream color */
@@ -370,6 +370,25 @@ td {
     padding: 15px;
     border-radius: 20px;
     margin-top: 15px;
+}
+
+ table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+}
+
+ th {
+    background-color: #20B2AA;
+    color: white;
+    padding: 10px;
+}
+
+ td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
 }
 
 
