@@ -221,6 +221,7 @@ nav li a {
 
 
 /* Desktop Viewport: Style rules for the main content */
+ 
 main {
     margin-left: 5%;
 }
@@ -330,6 +331,17 @@ body {
 
 
 /* Improvement: Add more "breathing room" to your main content */
+/* Update  existing main rule to this */
+   main {
+    padding: 2em;
+    background-color: #FFFDF5; /* The new cream color */
+    overflow: auto;
+    font-family: Arial, sans-serif; /* Cleaner font for paragraphs */
+    font-size: 1.1em; /* Slightly smaller for better readability */
+    color: #333; /* Dark grey text is easier on the eyes than pure black */
+}
+
+
 main div {
     padding-bottom: 20px;
 }
