@@ -169,9 +169,8 @@ footer {
 /* Media Query for Tablet Viewport */
 @media screen and (min-width: 550px),print {
 
-}
 
-/* Tablet Viewport: Show tab-desk class, hide mobile class */
+ /* Tablet Viewport: Show tab-desk class, hide mobile class */
 .tab-desk {
     display: block;
 }
@@ -307,11 +306,12 @@ main h1 {
 }
 
 
-/* --- End of Tablet View --- */
-    main h1 {
-        font-size: 1.5em;
-    } 
- 
+/* ... specific tablet styles ... */
+main h1 {
+    font-size: 1.5em;
+} 
+} 
+
 /* --- Main Styles (Works on all screens) --- */
 main {
     padding: 2em;
