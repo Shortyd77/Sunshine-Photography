@@ -13,7 +13,7 @@ searchBox.addEventListener('focus', function() {
 // Blur Event: Resets style when user clicks away
 searchBox.addEventListener('blur', function() {
   searchBox.className =""; 
-    if(searchBox.value ===") {
+    if(searchBox.value ==="") {
        searchBox.value = 'Search gallery...';
   } 
 },false);
@@ -26,7 +26,7 @@ function protect(e) {
 
 //Loop through images to add the protection
 for (var i = 0; i <allImages.length; i++) {
-  allimages[i].addEventListener('contextmenu', protect, false);
+  allImages[i].addEventListener('contextmenu', protect, false);
 }
 
                            
