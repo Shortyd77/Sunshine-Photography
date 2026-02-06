@@ -12,7 +12,7 @@ $(function() {
   $galleryItems.hide().each(function(index) {
     // delay increases for each item (index *200ms)
     //fadeLin takes 800ms to complete
-    $(this).delay(200 * index).fadeIn(800);
+    $(this).delay(500 * index).fadeIn(1500);
   });
 
 });
