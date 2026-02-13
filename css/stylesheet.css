@@ -371,6 +371,24 @@ td {
 
 } 
 
+.weather-glass {
+    background: rgba(255, 255, 255, 0.2); /* Transparent white */
+    backdrop-filter: blur(10px); /* Blurs the background image behind it */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 15px;
+    width: 200px;
+    margin: 20px auto;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+#temp-display {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
   
  
  
