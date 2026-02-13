@@ -2,7 +2,7 @@ function init() {
   var mapOptions = {
     center: new google.maps.LatLng(48.2931, -122.6436), // Coordinates for Oak Harbor, Wa
     mapTypeId: google.maps.MapTypeId.ROADMAP,
-    zoom:11
+    zoom: 11
   };
 
   var venueMap;
