@@ -4,19 +4,18 @@ async function getLiveWeather() {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
 
   try {
-    const response = await fetch(url); // Fetch data from API
+    const response = await fetch(url); 
     if (!response.ok) throw new Error("Weather data not found");
     
-    const data = await response.json(); // Convert response to JSON
+    const data = await response.json(); 
 
-    // Update the HTML elements with the data
-    document.getElementById('temp').innerText = Math.round(data.main.temp);
+    // FIXED: Changed 'temp' to 'temp-display' and added the degree symbol!
+    document.getElementById('temp-display').innerText = Math.round(data.main.temp) + "°";
     document.getElementById('condition').innerText = data.weather[0].description;
     
   } catch (error) {
-    // Error Handling (Chapter 10 requirement)
     console.error("Error fetching weather:", error);
-    document.getElementById('home-weather').style.display = 'none'; // Hide if it fails
+    document.getElementById('home-weather').style.display = 'none'; 
   }
 }
 
