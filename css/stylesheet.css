@@ -363,6 +363,15 @@ td {
 
 }
 
+/* Google Map Size Requirements */
+#map {
+ width: 100%;
+ max-width: 600px;
+ margin: 20px auto;
+ border: 3px solid #20B2AA;
+ border-radius: 10px;
+}
+
 
  
  
