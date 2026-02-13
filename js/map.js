@@ -15,4 +15,4 @@ function loadScript() {
     document.body.appendChild(script);
 }
 
-window.onload = loadScript;
+window.addEventListener('load', loadScript);
