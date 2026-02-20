@@ -363,14 +363,10 @@ td {
 
 }
 
-#photo-viewer {
- position: relative;
- height: 450px;
- overflow: hidden;
- background-color: #000;
- border: 4px solid #20B2AA;
- margin-bottom: 10px;
-
+#photo-viewer{
+  position: relative;
+  height: 300px;   /* match teacher example */
+  overflow: hidden;
 }
 
 #photo-viewer img {
