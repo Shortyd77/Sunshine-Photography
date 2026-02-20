@@ -4,23 +4,21 @@ var cache = {};
 var $frame = $('#photo-viewer');
 var $thumbs = $('.thumb');
 
-function crossfade($img) {
-  if ($current) {
-    $current.stop().fadeOut('slow');
-  }
 
   function crossfade($img) {
   if ($current) {
     $current.stop().fadeOut('slow');
   }
 
-  // Let CSS handle centering (transform)
-  $img.css({ marginLeft: 0, marginTop: 0 });
+  // Let CSS handle centering
+  $img.css({
+    marginLeft: 0,
+    marginTop: 0
+  });
 
   $img.stop().fadeTo('slow', 1);
   $current = $img;
 }
-
   
 
 $(document).on('click', '.thumb', function(e){
