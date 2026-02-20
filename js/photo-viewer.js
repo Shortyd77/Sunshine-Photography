@@ -50,7 +50,7 @@ $(document).on('click', '.thumb', function(e){
 
     $frame.addClass('is-loading');
 
-    $img.attr()({
+    $img.attr ({
       'src': src,
       'alt': this.title || '' /* FIXED: Changed single double-quote to two single-quotes */
     });
