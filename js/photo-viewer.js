@@ -10,11 +10,11 @@ function crossfade($img) {
   }
 
   $img.css({
-    marginLeft: -$img.width()/2,  /* FIXED: Added missing $ before img */
-    marginTop: -$img.height()/2   /* FIXED: Added missing $ before img */
+    marginLeft: -$img.width() /2,  /* FIXED: Added missing $ before img */
+    marginTop: -$img.height() /2   /* FIXED: Added missing $ before img */
   });
 
-  $img.stop().fadeTo('slow',1);
+  $img.stop().fadeTo('slow', 1);
   $current = $img;
 }
 
