@@ -379,6 +379,28 @@ td {
   object-fit: contain;
 }
 
+/* Layout for the viewer + thumbnails */
+.gallery-container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  max-width: 900px;
+  margin: 0 auto; /* centers the whole gallery block */
+}
+
+/* Make the viewer take the main space */
+#photo-viewer {
+  flex: 1;
+  min-width: 320px;
+}
+
+/* Thumbnails column */
+#thumbnails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .thumb img {
  width: 80px;
  height: 60px;
