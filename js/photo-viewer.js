@@ -9,14 +9,19 @@ function crossfade($img) {
     $current.stop().fadeOut('slow');
   }
 
-  $img.css({
-    marginLeft: -$img.width() /2,  /* FIXED: Added missing $ before img */
-    marginTop: -$img.height() /2   /* FIXED: Added missing $ before img */
-  });
+  function crossfade($img) {
+  if ($current) {
+    $current.stop().fadeOut('slow');
+  }
+
+  // Let CSS handle centering (transform)
+  $img.css({ marginLeft: 0, marginTop: 0 });
 
   $img.stop().fadeTo('slow', 1);
   $current = $img;
 }
+
+  
 
 $(document).on('click', '.thumb', function(e){
   var $img,
