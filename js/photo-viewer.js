@@ -39,14 +39,17 @@ $(document).on('click', '.thumb', function(e){
       isLoading: true
     };
 
-    $img.on('load', function(){
-      $img.hide();
-      $frame.removeClass('is-loading').append($img);
-      cache[src].isLoading = false;
-      if (request === src) {
-        crossfade($img);
-      }
-    });
+    $img.on('load', function () {
+  // Keep it measurable (not display:none), but invisible
+  $img.css({ opacity: 0, display: 'block' });
+
+  $frame.removeClass('is-loading').append($img);
+  cache[src].isLoading = false;
+
+  if (request === src) {
+    crossfade($img);
+  }
+});
 
     $frame.addClass('is-loading');
 
