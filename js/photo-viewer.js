@@ -7,22 +7,20 @@ var $thumbs = $('.thumb');
 function crossfade($img) {
   if ($current) {
     $current.stop().fadeOut('slow');
-}
+  }
 
   $img.css({
-    marginLeft: -img.width()/2,
-    marginTop: -$img.height()/2
-
+    marginLeft: -$img.width()/2,  /* FIXED: Added missing $ before img */
+    marginTop: -$img.height()/2   /* FIXED: Added missing $ before img */
   });
 
   $img.stop().fadeTo('slow',1);
   $current = $img;
-
 }
 
 $(document).on('click', '.thumb', function(e){
   var $img,
-    src =this.href;
+    src = this.href;
     request = src;
 
   e.preventDefault();
@@ -32,14 +30,13 @@ $(document).on('click', '.thumb', function(e){
 
   if (cache.hasOwnProperty(src)) {
     if (cache[src].isLoading === false) {
-      crossfade(cache[src].img);
-}
-
+      crossfade(cache[src].$img); /* FIXED: Added missing $ before img */
+    }
   } else {
     $img = $('<img/>');
     cache[src] = {
       $img: $img,
-      isLoading:true
+      isLoading: true
     };
 
     $img.on('load', function(){
@@ -49,16 +46,15 @@ $(document).on('click', '.thumb', function(e){
       if (request === src) {
         crossfade($img);
       }
-
     });
 
     $frame.addClass('is-loading');
 
     $img.attr ({
       'src': src,
-      'alt': this.title || "
+      'alt': this.title || '' /* FIXED: Changed single double-quote to two single-quotes */
     });
   }
 });
 
-$('.thumb').eq(0).click(); // starts the gallery auto
+$('.thumb').eq(0).click();
