@@ -394,6 +394,11 @@ td {
   min-width: 320px;
 }
 
+#portfolio-viewer h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
 /* Thumbnails column */
 #thumbnails {
   display: flex;
