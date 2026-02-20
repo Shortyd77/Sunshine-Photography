@@ -375,10 +375,10 @@ td {
 
 #photo-viewer img {
  position: absolute;
- max-width: 100%;
  top: 50%;
  left: 50%;
- /* the js will handle the centering math! */
+ max-width: 100%;
+
 }
 
 .thumb img {
