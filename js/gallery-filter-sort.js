@@ -58,16 +58,21 @@ $(function() {
     }
     $search.on('input', filterSearch);
 
-    // 4. SORTING FUNCTIONALITY (By Tag Name)
-    $('#sort-az').on('click', function() {
+    // 4. SORTING FUNCTIONALITY 
+$('#sort-dropdown').on('change', function() {
+    var selection = $(this).val();
+    var $gallery = $('#gallery-container');
+    var $cards = $('.gallery');
+
+    if (selection === 'az') {
         $cards.sort(function(a, b) {
             return $(a).data('tags') > $(b).data('tags') ? 1 : -1;
         }).appendTo($gallery);
-    });
-
-    $('#sort-za').on('click', function() {
+    } else if (selection === 'za') {
         $cards.sort(function(a, b) {
             return $(a).data('tags') < $(b).data('tags') ? 1 : -1;
         }).appendTo($gallery);
+    }
+});
     });
 });
