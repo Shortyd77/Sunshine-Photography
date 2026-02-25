@@ -1,66 +1,76 @@
-var request;
-var $current;
-var cache = {};
-var $frame = $('#photo-viewer');
-var $thumbs = $('.thumb');
+$(function() {
+    var $gallery = $('#gallery-container');
+    var $cards = $('.gallery');
+    var $search = $('#photoSearch');
+    var $buttons = $('#filter-buttons');
+    var tagged = {};
+    var cache = [];
 
+    // 1. PREPARE DATA (Search Cache & Filter Tags)
+    $cards.each(function() {
+        var card = this;
+        var tags = $(this).data('tags');
+        var altText = $(this).find('img').attr('alt').toLowerCase();
 
-  function crossfade($img) {
-  if ($current) {
-    $current.stop().fadeOut('slow');
-  }
+        cache.push({
+            element: card,
+            text: altText
+        });
 
-  // Let CSS handle centering
-  $img.css({
-    marginLeft: 0,
-    marginTop: 0
-  });
-
-  $img.stop().fadeTo('slow', 1);
-  $current = $img;
-}
-  
-
-$(document).on('click', '.thumb', function(e){
-  var $img,
-    src = this.href;
-    request = src;
-
-  e.preventDefault();
-
-  $thumbs.removeClass('active');
-  $(this).addClass('active');
-
-  if (cache.hasOwnProperty(src)) {
-    if (cache[src].isLoading === false) {
-      crossfade(cache[src].$img); /* FIXED: Added missing $ before img */
-    }
-  } else {
-    $img = $('<img/>');
-    cache[src] = {
-      $img: $img,
-      isLoading: true
-    };
-
-    $img.on('load', function () {
-  // Keep it measurable (not display:none), but invisible
-  $img.css({ opacity: 0, display: 'block' });
-
-  $frame.removeClass('is-loading').append($img);
-  cache[src].isLoading = false;
-
-  if (request === src) {
-    crossfade($img);
-  }
-});
-
-    $frame.addClass('is-loading');
-
-    $img.attr ({
-      'src': src,
-      'alt': this.title || '' /* FIXED: Changed single double-quote to two single-quotes */
+        if (tags) {
+            tags.split(',').forEach(function(tagName) {
+                tagName = tagName.trim();
+                if (tagged[tagName] == null) { tagged[tagName] = []; }
+                tagged[tagName].push(card);
+            });
+        }
     });
-  }
-});
 
-$('.thumb').eq(0).click();
+    // 2. CREATE FILTER BUTTONS
+    $('<button/>', {
+        text: 'Show All',
+        class: 'active',
+        click: function() {
+            $(this).addClass('active').siblings().removeClass('active');
+            $cards.fadeIn();
+            $search.val(''); // Clear search when filtering
+        }
+    }).appendTo($buttons);
+
+    $.each(tagged, function(tagName) {
+        $('<button/>', {
+            text: tagName,
+            click: function() {
+                $(this).addClass('active').siblings().removeClass('active');
+                $cards.hide().filter(tagged[tagName]).fadeIn();
+                $search.val(''); // Clear search when filtering
+            }
+        }).appendTo($buttons);
+    });
+
+    // 3. SEARCH FUNCTIONALITY
+    function filterSearch() {
+        var query = this.value.trim().toLowerCase();
+        cache.forEach(function(obj) {
+            var index = obj.text.indexOf(query);
+            $(obj.element).toggle(index !== -1);
+        });
+        // Remove active class from filter buttons when searching
+        $buttons.find('button').removeClass('active');
+    }
+    $search.on('input', filterSearch);
+
+    // 4. SORTING FUNCTIONALITY (Dropdown)
+    $('#sort-dropdown').on('change', function() {
+        var selection = $(this).val();
+        if (selection === 'az') {
+            $cards.sort(function(a, b) {
+                return $(a).data('tags') > $(b).data('tags') ? 1 : -1;
+            }).appendTo($gallery);
+        } else if (selection === 'za') {
+            $cards.sort(function(a, b) {
+                return $(a).data('tags') < $(b).data('tags') ? 1 : -1;
+            }).appendTo($gallery);
+        }
+    });
+});
