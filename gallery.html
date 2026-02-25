@@ -32,21 +32,24 @@
      </nav>
      
      <!-- use the main area content of the webpage-->
+    <main> 
    
-	<main class="gallery-grid">
-    <div id="controls" style="text-align: center; margin: 30px auto; max-width: 800px;">
-        <div id="search-area">
-            <input type="text" id="photoSearch" placeholder="Search by name (e.g. 'girl', 'street')...">
-        </div>
-        
-        <div id="filter-buttons" style="margin: 15px 0;">
+	<div id="gallery-toolbar">
+    <div class="toolbar-left">
+        <input type="text" id="photoSearch" placeholder="Search gallery...">
+    </div>
+    
+    <div class="toolbar-right">
+        <div id="filter-buttons">
             </div>
 
-        <div id="sort-area">
-            <strong>Sort by:</strong>
-            <button id="sort-az">Category (A-Z)</button>
-            <button id="sort-za">Category (Z-A)</button>
-        </div>
+        <select id="sort-dropdown">
+            <option value="none">Sort by Category...</option>
+            <option value="az">Category (A-Z)</option>
+            <option value="za">Category (Z-A)</option>
+        </select>
+    </div>
+</div>
     </div>
 
     <div id="gallery-container">
