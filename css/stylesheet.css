@@ -419,6 +419,49 @@ td {
  border-color: #20B2AA; /* Hightligts the photo that is been view */
 
 }
+
+/* Toolbar Container */
+#gallery-toolbar {
+    display: flex;
+    justify-content: space-between; /* This pushes items to the edges */
+    align-items: center;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #FFFDF5; /* Your Cream color */
+    border-bottom: 2px solid #20B2AA; /* Your Teal */
+}
+
+/* Grouping the buttons and dropdown together */
+.toolbar-right {
+    display: flex;
+    gap: 15px; /* Adds space between the buttons and the dropdown */
+    align-items: center;
+}
+
+/* Styling the new Sort Dropdown */
+#sort-dropdown {
+    padding: 8px;
+    border: 2px solid #20B2AA;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Professional look for buttons on the right */
+#filter-buttons button {
+    background-color: transparent;
+    border: 1px solid #20B2AA;
+    color: #20B2AA;
+    padding: 5px 12px;
+    margin: 0 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#filter-buttons button.active {
+    background-color: #20B2AA;
+    color: white;
+}
  
  
  
