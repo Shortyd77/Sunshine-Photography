@@ -33,131 +33,81 @@
      
      <!-- use the main area content of the webpage-->
    
-		  <main class="gallery-grid">
+	<main class="gallery-grid">
+    <div id="controls" style="text-align: center; margin: 30px auto; max-width: 800px;">
+        <div id="search-area">
+            <input type="text" id="photoSearch" placeholder="Search by name (e.g. 'girl', 'street')...">
+        </div>
+        
+        <div id="filter-buttons" style="margin: 15px 0;">
+            </div>
 
-     
-     <div class="gallery">
-     <a target="_blank" href="images/Autumn_gardens.JPG">
-      <img src="images/Autumn_gardens.JPG" alt= "girl in garden">
-      </a>
-      <div class="desc"> Young lady enjoying her day in the park</div>
-      </div>
-      
-   
-
-    <div class="gallery">
-    <a target="_blank" href="images/street_bethany.jpeg">
-     <img src="images/street_bethany.jpeg" alt="lady in the street">
-     </a>
-     <div class="desc"> Just hanging out in the rain</div>
-     </div>
-     
-     
-     <div class="gallery">
-     <a target="_blank" href="images/black_white_boys.jpg">
-     <img src="images/black_white_boys.jpg" alt ="boys hanging out">
-     </a>
-     <div class="desc"> Street Photography</div>
-     </div>
-     
-     
-    
-    <div class="gallery">
-    <a target="_blank" href="images/fairy_jeana.jpg">
-    <img src="images/fairy_jeana.jpg" alt="fairy woods">
-
-     <div class="desc">Fantasy Shoot</div>
-     </div>
-     
-     
-    <div class="gallery">
-    <a target="_blank" href="images/Tori_Pixie_in_tree.jpg">
-     <img src="images/Tori_Pixie_in_tree.jpg" alt="pixie in a tree">
-     </a>
-     <div class="desc">Cosplay Shoot</div>
-     </div>
-      
-   
-    <div class="gallery">
-    <a target="_blank" href="images/street_group.jpeg">
-     <img src="images/street_group.jpeg" alt="group of kids in street">
-     </a>
-     <div class="desc">Street Photography</div>
-     </div>
-    
-
-    <div class="gallery">
-    <a target="_blank" href="images/ladies_fingers.jpg">
-     <img src="images/ladies_fingers.jpg" alt="ladies in the woods">
-    </a>
-    <div class="desc">Fantasy Shoot</div>
-    </div>    
-    
-     <div class="gallery">
-     <a target="_blank" href="images/garageb_P.jpeg">
-     <img src="images/garageb_P.jpeg" alt="street photography guy and a girl">
-     </a>
-     <div class="desc">Bellingham street shoot</div>
-     </div>
-    
-    
-    <div class="gallery">
-    <a target="_blank" href="images/Autumn_Sheliahpond.jpg">
-     <img src="images/Autumn_Sheliahpond.jpg" alt="two ladies in garden">
-     </a>
-     <div class="desc">Fantasy Shoot</div>
-     </div>
-    
-   
-     <div class="gallery">
-     <a target="_blank" href="images/isaiah_underligh.jpeg">
-     <img src="images/isaiah_underligh.jpeg" alt="young man under a building">
-     </a>
-     <div class="desc">Bellingham Streets</div>
-     </div>
-    
-     <div class="gallery">
-     <a target="_blank" href="images/brianna_close_up.JPG">
-     <img src="images/brianna_close_up.JPG" alt= "close up of a girl">
-     </a>
-     <div class="desc"> Beach Shoot</div>
-     </div>
- 
-    <div class="gallery">
-    <a target="_blank" href="images/fairy_ladies.jpg">
-    <img src="images/fairy_ladies.jpg" alt="ladies in the woods">
-    </a>
-    <div class="desc"> Fantasy Shoot </div>
+        <div id="sort-area">
+            <strong>Sort by:</strong>
+            <button id="sort-az">Category (A-Z)</button>
+            <button id="sort-za">Category (Z-A)</button>
+        </div>
     </div>
-     
-    
 
-    <div class="gallery">
-    <a target="_blank" href="images/paul_street.jpeg">
-     <img src="images/paul_street.jpeg" alt="young man in streets">
-     </a>
-     <div class="desc"> Bellingham Street</div>
-     </div>
-     
-    <div class="gallery">
-    <a target="_blank" href="images/girls_street.jpg">
-     <img src="images/girls_street.jpg" alt="young ladies in the street">
-     </a>
-     <div class="desc">Street Shoot</div>
-     </div>
-     
+    <div id="gallery-container">
+        <div class="gallery" data-tags="Portrait Photography">
+            <a target="_blank" href="images/Autumn_gardens.JPG">
+                <img src="images/Autumn_gardens.JPG" alt="girl in garden">
+            </a>
+            <div class="desc">Young lady in the park</div>
+        </div>
 
-    <div class="gallery">
-    <a target="_blank" href="images/isaiah_hoodie.jpg">
-     <img src="images/isaiah_hoodie.jpg" alt="young man wearing colorful hoodie">
-     </a>
-     <div class="desc">Downtown shoot</div>
-     </div>
+        <div class="gallery" data-tags="Street Photography">
+            <a target="_blank" href="images/street_bethany.jpeg">
+                <img src="images/street_bethany.jpeg" alt="lady in the street">
+            </a>
+            <div class="desc">Hanging out in the rain</div>
+        </div>
 
-	<div id="search-container" style="text-align: center; margin: 20px;"> <input type="text" id="photoSearch" value="Search gallery...">
-    <p id="helpText" style="height: 20px; color: #20B2AA;"></p> </div>
-    
-</div>
+        <div class="gallery" data-tags="Street Photography">
+            <a target="_blank" href="images/black_white_boys.jpg">
+                <img src="images/black_white_boys.jpg" alt="boys hanging out">
+            </a>
+            <div class="desc">Street Photography</div>
+        </div>
+
+        <div class="gallery" data-tags="Fantasy & Cosplay">
+            <a target="_blank" href="images/fairy_jeana.jpg">
+                <img src="images/fairy_jeana.jpg" alt="fairy woods">
+            </a>
+            <div class="desc">Fantasy Shoot</div>
+        </div>
+
+        <div class="gallery" data-tags="Fantasy & Cosplay">
+            <a target="_blank" href="images/Tori_Pixie_in_tree.jpg">
+                <img src="images/Tori_Pixie_in_tree.jpg" alt="pixie in a tree">
+            </a>
+            <div class="desc">Cosplay Shoot</div>
+        </div>
+
+        <div class="gallery" data-tags="Street Photography">
+            <a target="_blank" href="images/street_group.jpeg">
+                <img src="images/street_group.jpeg" alt="group of kids in street">
+            </a>
+            <div class="desc">Street Photography</div>
+        </div>
+
+        <div class="gallery" data-tags="Fantasy & Cosplay">
+            <a target="_blank" href="images/ladies_fingers.jpg">
+                <img src="images/ladies_fingers.jpg" alt="ladies in the woods">
+            </a>
+            <div class="desc">Fantasy Shoot</div>
+        </div>
+
+        <div class="gallery" data-tags="Wedding Photography">
+            <a target="_blank" href="images/Autumn_Sheliahpond.jpg">
+                <img src="images/Autumn_Sheliahpond.jpg" alt="wedding garden">
+            </a>
+            <div class="desc">Wedding Photography</div>
+        </div>
+        
+        </div>
+</main>
 
 
 </main>
@@ -173,7 +123,7 @@
 </div>
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src="js/gallery.js"></script>
+	<script src="js/gallery-filter-sort.js"></script>
     <script src ="js/gallery-effects.js"></script>  
 
 </body>
