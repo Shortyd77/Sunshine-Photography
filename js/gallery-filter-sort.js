@@ -10,15 +10,16 @@ $(function() {
     $cards.each(function() {
         var card = this;
         var tags = $(this).data('tags');
-        var altText = $(this).find('img').attr('alt').toLowerCase();
+        var $img = $(this).find('img');
+        
+        // BUG FIX: If an image is missing 'alt' text, this safety check prevents a crash!
+        var altText = $img.attr('alt') ? $img.attr('alt').toLowerCase() : "";
 
-        // Add to search cache
         cache.push({
             element: card,
             text: altText
         });
 
-        // Add to tags object
         if (tags) {
             tags.split(',').forEach(function(tagName) {
                 tagName = tagName.trim();
@@ -35,6 +36,7 @@ $(function() {
         click: function() {
             $(this).addClass('active').siblings().removeClass('active');
             $cards.fadeIn();
+            $search.val(''); // Clear search when filtering
         }
     }).appendTo($buttons);
 
@@ -44,6 +46,7 @@ $(function() {
             click: function() {
                 $(this).addClass('active').siblings().removeClass('active');
                 $cards.hide().filter(tagged[tagName]).fadeIn();
+                $search.val(''); // Clear search when filtering
             }
         }).appendTo($buttons);
     });
@@ -55,24 +58,22 @@ $(function() {
             var index = obj.text.indexOf(query);
             $(obj.element).toggle(index !== -1);
         });
+        // Remove active class from filter buttons when searching
+        $buttons.find('button').removeClass('active');
     }
     $search.on('input', filterSearch);
 
-    // 4. SORTING FUNCTIONALITY 
-$('#sort-dropdown').on('change', function() {
-    var selection = $(this).val();
-    var $gallery = $('#gallery-container');
-    var $cards = $('.gallery');
-
-    if (selection === 'az') {
-        $cards.sort(function(a, b) {
-            return $(a).data('tags') > $(b).data('tags') ? 1 : -1;
-        }).appendTo($gallery);
-    } else if (selection === 'za') {
-        $cards.sort(function(a, b) {
-            return $(a).data('tags') < $(b).data('tags') ? 1 : -1;
-        }).appendTo($gallery);
-    }
-});
+    // 4. SORTING FUNCTIONALITY (Dropdown)
+    $('#sort-dropdown').on('change', function() {
+        var selection = $(this).val();
+        if (selection === 'az') {
+            $cards.sort(function(a, b) {
+                return $(a).data('tags') > $(b).data('tags') ? 1 : -1;
+            }).appendTo($gallery);
+        } else if (selection === 'za') {
+            $cards.sort(function(a, b) {
+                return $(a).data('tags') < $(b).data('tags') ? 1 : -1;
+            }).appendTo($gallery);
+        }
     });
 });
