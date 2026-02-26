@@ -365,7 +365,7 @@ td {
 
 #photo-viewer{
   position: relative;
-  height: 300px;   /* match teacher example */
+  height: 300px;   
   overflow: hidden;
 }
 
