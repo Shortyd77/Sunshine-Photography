@@ -6,13 +6,13 @@ $(function() {
     var tagged = {};
     var cache = [];
 
-    // 1. PREPARE DATA (Search Cache & Filter Tags)
+    // 1. PREPARE DATA //
     $cards.each(function() {
         var card = this;
         var tags = $(this).data('tags');
         var $img = $(this).find('img');
         
-        // BUG FIX: If an image is missing 'alt' text, this safety check prevents a crash!
+        
         var altText = $img.attr('alt') ? $img.attr('alt').toLowerCase() : "";
 
         cache.push({
