@@ -462,6 +462,79 @@ td {
     background-color: #20B2AA;
     color: white;
 }
+
+/* Contact form styleing */
+
+.booking-form {
+ max-width: 500px;
+ margin: 30px auto;
+ padding: 30px;
+ background-color: #ffffff;
+ border-radius: 10px;
+ box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* add sofe shadow to form */
+ text-align: left;
+}
+
+.form-group {
+ margin-bottom: 20px;
+}
+
+.form-group label {
+ font-weight: bold;
+ color: #333;
+ display: block;
+ margin-bottom: 5px;
+}
+
+/* Style the text boxes and dropdowns */
+.booking-form input[type="text"],
+.booking-form input[type="email"],
+.booking-form input[type="date"],
+.booking-form textarea {
+ width: 100%;
+ padding: 12px;
+ border: 2px solid #ccc;
+ border-radius: 5px;
+ box-sizing: border-box;
+ font-family: Arial, sans-serif;
+ transition: border-color 0.3s ease;
+}
+
+/* Make the box teal when user clicks inside it */
+.booking-form input:focus,
+.booking-form textarea:focus {
+ border-color: #20b2aa;
+ outline: none;
+}
+
+/* Style the Sumbit button */
+.booking-form input[type="submit"] {
+ background-color: #2ob2aa;
+ color: white;
+ padding: 12px 20px;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+ font-size: 16px;
+ transition: background-color 0.3s ease;
+}
+
+/* Change button color when hovering */
+.booking-form input[type="sumbit"]:hover {
+ background-color: #16807a;
+}
+
+/* styling for the JavaScript Error Messages */
+.error.message {
+ color: #f08080;
+ display: block;
+ font-size: 14px;
+ margin-top: 5px;
+ font-weight: bold;
+}
+
+
+
  
  
  
