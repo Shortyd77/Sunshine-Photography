@@ -80,12 +80,12 @@
   }
 
   // custom validation for sunshine photography //
-  functon vaildateMessage() {
+  functon validateMessage() {
     var message = document.getElementById('message');
     if (!message) return true;
 
     // ensure they type more than just hi //
-    var valid = message.value.length >=10;
+    var valid = message.value.length >= 10;
     if (!valid && message.value.length > 0) {
       setErrorMessage(message, 'Please provide a few more details ( at least 10 characters)');
     }
@@ -106,7 +106,7 @@
       var errorContainer = $el.siblings('.error.message');
 
       if (!errorContainer.length) {
-        errorContainer = $('<span class="error message" style="color: #f08080; display: block; font-size: 14px;></span>').insertAfter($el);
+        errorContainer = $('<span class="error message" style="color: #f08080; display: block; font-size: 14px;"></span>').insertAfter($el);
       }
       errorContainer.text(getErrorMessage(el));
     }
